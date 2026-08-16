@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decision Journal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="hero" aria-labelledby="app-title">
+      <p class="eyebrow">Decision Journal</p>
+      <h1 id="app-title">Разберите решение до первого действия</h1>
+      <p class="subtitle">
+        Запишите решение, которое хотите принять, и получите демонстрационную структуру анализа:
+        факты, предположения, варианты, риски и следующий шаг.
+      </p>
+    </section>
+
+    <section class="panel input-panel" aria-label="Форма анализа решения">
+      <label for="decision-input">Какое решение вы хотите принять?</label>
+      <textarea
+        id="decision-input"
+        rows="6"
+        placeholder="Например: стоит ли мне переходить на новую работу в ближайшие два месяца?"
+      ></textarea>
+      <button id="analyze-button" type="button">Проанализировать</button>
+    </section>
+
+    <section id="result" class="panel result-panel hidden" aria-live="polite">
+      <div class="result-header">
+        <p class="eyebrow">Демонстрационный анализ</p>
+        <h2>Структура решения</h2>
+      </div>
+      <div id="result-grid" class="result-grid"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
